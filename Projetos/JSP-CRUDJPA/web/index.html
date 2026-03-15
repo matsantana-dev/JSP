@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function validar(){
+                let botao = document.getElementById("b1").value;
+                alert(botao)
+                let descr = document.getElementById("idDescr").value;
+                if (botao=="Gravar"){
+                    if(descr.length>2)
+                        return(true);
+                    else
+                        return(false);
+                    
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor="pink">
+        <form action="controller/Controlador.jsp" method="post">
+            Codigo:<input type="text" name="txtCodigo" /> <br/>
+            Descrição:<input type="text" name="txtDescr" id="idDescr"/> <br/>
+            Ano:<input type="text" name="txtAno" /> <br/>
+            Preço:<input type="text" name="txtPreco" /> <br/>
+            <input type="submit" name="b1" value="Gravar"/> &emsp;&emsp; 
+            <input type="submit" name="b1" value="Alterar"/> &emsp;&emsp; 
+            <input type="submit" name="b1" value="Remover"/> &emsp;&emsp; 
+            <input type="submit" name="b1" value="Listar"/>  
+        </form>
+        
+    </body>
+</html>
